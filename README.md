@@ -1,6 +1,5 @@
-========================================================================
-                      Book Recommendation System
-                          Multi-Modal Fusion
+Book Recommendation System
+   Multi-Modal Fusion
 ========================================================================
 
 1. 프로젝트 개요 (OVERVIEW)
