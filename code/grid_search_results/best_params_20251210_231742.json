@@ -1,0 +1,10 @@
+{
+  "LEARNING_RATE": 0.003,
+  "EMBED_DIM": 32,
+  "MLP_DIMS": "[256, 128, 64]",
+  "DROPOUT": 0.1,
+  "BATCH_SIZE": 64,
+  "best_val_rmse": 1.3877071548672764,
+  "final_train_rmse": 1.3739505114876545,
+  "final_val_rmse": 1.38925964574805
+}
