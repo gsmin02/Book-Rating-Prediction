@@ -54,19 +54,18 @@ E. 최종 예측:
 
 5. 실행 예시 (USAGE EXAMPLE)
 --------------------------
-# 1. Dataset 및 DataLoader 생성 (분리된 X_train, y_train을 입력)
-# train_data = bookset(X_train, y_train, device='mps')
-# train_loader = DataLoader(train_data, batch_size=256, shuffle=True)
+1. Dataset 및 DataLoader 생성 (분리된 X_train, y_train을 입력)
+train_data = bookset(X_train, y_train, device='mps')
+train_loader = DataLoader(train_data, batch_size=256, shuffle=True)
 
-# 2. 모델 인스턴스화
-# model = Model(user_cnt=..., item_cnt=..., ..., embedding_dim=64, freq_of_item=..., device='mps')
-# optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
-# criterion = nn.MSELoss()
+2. 모델 인스턴스화
+model = Model(user_cnt=..., item_cnt=..., ..., embedding_dim=64, freq_of_item=..., device='mps')
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
+criterion = nn.MSELoss()
 
-# 3. 학습 루프 (Training Loop)
-# for features, ratings in train_loader:
-#     # features는 bookset의 __getitem__ 순서대로 언팩
-#     outputs = model(*features)
-#     loss = criterion(outputs, ratings)
-#     loss.backward()
-#     optimizer.step()
+3. 학습 루프 (Training Loop)
+for features, ratings in train_loader:
+    outputs = model(*features)
+    loss = criterion(outputs, ratings)
+    loss.backward()
+    optimizer.step()
